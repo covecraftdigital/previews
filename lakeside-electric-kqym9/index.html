@@ -13,51 +13,54 @@
 <meta property="og:url" content="https://covecraftdigital.github.io/previews/lakeside-electric-kqym9/">
 <meta property="og:image" content="https://covecraftdigital.github.io/previews/assets/electrical.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23E9A51C'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial Narrow,Arial,sans-serif' font-weight='700' font-size='27' fill='%231b1813'%3ELE%3C/text%3E%3C/svg%3E">
-<link rel="preload" as="font" type="font/woff" href="../assets/archivo.woff" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23E9A51C'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='25' fill='%231b1813'%3ELE%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="font" type="font/woff" href="../assets/jakarta.woff" crossorigin>
 <link rel="preload" as="image" href="../assets/electrical.jpg" media="(min-width:761px)">
 <link rel="preload" as="image" href="../assets/electrical-m.jpg" media="(max-width:760px)">
 <style>
-@font-face{font-family:"Archivo";src:url(../assets/archivo.woff) format("woff");font-weight:400 800;font-stretch:62% 100%;font-display:swap}
-:root{--base:#1b1813;--base-rgb:27,24,19;--signal:#E9A51C;--ink:#1b1813;--name:clamp(56px,8.4vw,136px);
+@font-face{font-family:"Jakarta";src:url(../assets/jakarta.woff) format("woff");font-weight:400 800;font-display:swap}
+:root{--base:#1b1813;--base-rgb:27,24,19;--signal:#E9A51C;--ink:#1b1813;--name:clamp(44px,6.2vw,98px);
  --pad:clamp(20px,5vw,80px);--white:#fff;--soft:rgba(255,255,255,.8)}
 *{box-sizing:border-box;margin:0;padding:0}
 a,a[x-apple-data-detectors],a[href^="tel"]{color:inherit!important;text-decoration:none!important;font:inherit!important;pointer-events:none}
 html{background:var(--base)}
-body{font-family:"Archivo","Arial Narrow",Arial,system-ui,sans-serif;font-stretch:100%;color:var(--white);
+body{font-family:"Jakarta",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--white);
  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;background:var(--base)}
 
-.hero{position:relative;isolation:isolate;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
- padding:22px var(--pad) 28px;overflow:hidden}
+.hero{position:relative;isolation:isolate;min-height:calc(100vh - 76px);min-height:calc(100svh - 76px);display:flex;flex-direction:column;
+ padding:0 var(--pad) 28px;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url(../assets/electrical.jpg) center/cover no-repeat;
  transform:scale(1.07);animation:settle 2.2s cubic-bezier(.2,.7,.2,1) forwards}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;
  background:linear-gradient(90deg,rgba(var(--base-rgb),.95) 0%,rgba(var(--base-rgb),.84) 40%,rgba(var(--base-rgb),.42) 100%),
  linear-gradient(0deg,rgba(var(--base-rgb),.75) 0%,rgba(var(--base-rgb),0) 38%)}
 
-.top{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.mark{flex:none;width:52px;height:52px;border-radius:9px;background:var(--signal);color:var(--ink);display:grid;place-items:center;
- font-weight:800;font-stretch:72%;font-size:23px;letter-spacing:.01em}
-.top-right{display:flex;align-items:center;gap:22px}
-.top-phone{font-weight:600;font-size:17px;font-variant-numeric:tabular-nums;letter-spacing:.01em;white-space:nowrap}
-.top-btn{border:1.5px solid rgba(255,255,255,.45);border-radius:6px;padding:11px 18px;font-weight:600;font-size:15px;white-space:nowrap}
+.nav{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px;
+ padding:12px var(--pad);background:#fff;color:#16181b;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.brand{display:flex;align-items:center;gap:13px;min-width:0}
+.mark{flex:none;width:46px;height:46px;border-radius:10px;background:var(--signal);color:var(--ink);display:grid;place-items:center;
+ font-weight:700;font-size:17px;letter-spacing:-.01em}
+.brand-name{font-weight:700;font-size:19px;letter-spacing:-.018em;line-height:1.15}
+.nav-right{display:flex;align-items:center;gap:24px}
+.nav-phone{font-weight:600;font-size:16px;color:#2b2e33;font-variant-numeric:tabular-nums;white-space:nowrap}
+.nav-btn{background:var(--signal);color:var(--ink);border-radius:8px;padding:12px 20px;font-weight:700;font-size:15px;white-space:nowrap}
 
 .main{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 408px;gap:clamp(40px,6vw,96px);align-items:end;padding:clamp(48px,9vh,110px) 0 clamp(28px,5vh,56px)}
-h1{font-size:var(--name);font-weight:800;font-stretch:72%;line-height:.9;letter-spacing:-.008em;max-width:11.5ch;
+h1{font-size:var(--name);font-weight:700;line-height:1;letter-spacing:-.038em;max-width:12ch;
  overflow-wrap:break-word;clip-path:inset(-25% 100% -25% -2%);animation:apply .95s .25s cubic-bezier(.2,.7,.15,1) forwards}
 .stripe{width:132px;height:8px;margin-top:clamp(22px,3.4vh,34px);background:var(--signal);transform:scaleX(0);transform-origin:left;
  animation:stripe .6s 1.05s cubic-bezier(.2,.7,.2,1) forwards}
-.sub{margin-top:22px;max-width:36ch;font-size:clamp(18px,1.45vw,22px);line-height:1.5;color:var(--soft)}
-.call{display:inline-block;margin-top:34px;background:var(--signal);color:var(--ink);border-radius:6px;padding:18px 30px;
- font-weight:700;font-stretch:88%;font-size:20px;letter-spacing:.005em;font-variant-numeric:tabular-nums}
+.sub{margin-top:22px;max-width:33ch;font-size:clamp(17px,1.35vw,20px);line-height:1.6;color:var(--soft)}
+.call{display:inline-block;margin-top:34px;background:var(--signal);color:var(--ink);border-radius:8px;padding:18px 28px;
+ font-weight:700;font-size:18px;letter-spacing:-.005em;font-variant-numeric:tabular-nums}
 
 .card{background:#fff;color:#1c1c1c;border-radius:10px;padding:34px 32px 28px;box-shadow:0 30px 70px -20px rgba(0,0,0,.55)}
-.card h2{font-size:30px;font-weight:800;font-stretch:80%;line-height:1.05;letter-spacing:-.005em}
+.card h2{font-size:28px;font-weight:700;line-height:1.1;letter-spacing:-.025em}
 .card p{margin:8px 0 22px;color:#5d5d5d;font-size:16px}
 .card .lbl{display:block;margin:14px 0 6px;font-size:14px;font-weight:600;color:#333}
 .field{border:1.5px solid #dadada;border-radius:6px;padding:14px 15px;font-size:16px;color:#8c8c8c}
-.card .go{display:block;margin-top:22px;text-align:center;background:var(--signal);color:var(--ink);border-radius:6px;padding:16px;
- font-weight:700;font-stretch:88%;font-size:18px}
+.card .go{display:block;margin-top:22px;text-align:center;background:var(--signal);color:var(--ink);border-radius:8px;padding:16px;
+ font-weight:700;font-size:18px}
 .card .fine{margin:14px 0 0;text-align:center;font-size:14px;color:#777}
 .nowrap{white-space:nowrap}
 
@@ -72,12 +75,15 @@ h1{font-size:var(--name);font-weight:800;font-stretch:72%;line-height:.9;letter-
 
 @media (max-width:1060px){.main{grid-template-columns:1fr;align-items:start}.card{max-width:520px}}
 @media (max-width:760px){
- .hero{padding:16px 20px 96px}
+ .hero{padding:0 20px 96px;min-height:0}
  .hero::before{background-image:url(../assets/electrical-m.jpg)}
  .hero::after{background:linear-gradient(180deg,rgba(var(--base-rgb),.78) 0%,rgba(var(--base-rgb),.9) 55%,rgba(var(--base-rgb),.97) 100%)}
- .mark{width:44px;height:44px;font-size:20px;border-radius:8px}
- .top-phone{display:none}
- .top-btn{padding:9px 14px;font-size:14px}
+ .nav{padding:10px 16px;min-height:64px}
+ .mark{width:40px;height:40px;font-size:15px;border-radius:9px}
+ .brand{gap:10px}
+ .brand-name{font-size:16px}
+ .nav-phone{display:none}
+ .nav-btn{padding:10px 14px;font-size:14px}
  .main{padding:44px 0 32px;gap:36px}
  h1{max-width:none}
  .stripe{width:96px;height:7px}
@@ -86,15 +92,15 @@ h1{font-size:var(--name);font-weight:800;font-stretch:72%;line-height:.9;letter-
  .card{padding:26px 22px 22px}
  .card h2{font-size:26px}
  .bar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--signal);color:var(--ink);text-align:center;
-  padding:17px 20px calc(17px + env(safe-area-inset-bottom));font-weight:700;font-stretch:88%;font-size:18px;font-variant-numeric:tabular-nums;
+  padding:17px 20px calc(17px + env(safe-area-inset-bottom));font-weight:700;font-size:18px;font-variant-numeric:tabular-nums;
   box-shadow:0 -10px 30px rgba(0,0,0,.25)}
 }
 </style></head><body>
+<header class="nav">
+ <div class="brand"><div class="mark" aria-hidden="true">LE</div><span class="brand-name">Lakeside Electric</span></div>
+ <div class="nav-right"><span class="nav-phone">(301) 555-0199</span><span class="nav-btn">Free estimate</span></div>
+</header>
 <section class="hero">
- <header class="top">
-  <div class="mark" aria-hidden="true">LE</div>
-  <div class="top-right"><span class="top-phone">(301) 555-0199</span><span class="top-btn">Free estimate</span></div>
- </header>
  <div class="main">
   <div class="copy">
    <h1>Lakeside Electric</h1>
