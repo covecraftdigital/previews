@@ -27,7 +27,7 @@ html{background:var(--base)}
 body{font-family:"Jakarta",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--white);
  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;background:var(--base)}
 
-.hero{position:relative;isolation:isolate;min-height:calc(100vh - 76px);min-height:calc(100svh - 76px);display:flex;flex-direction:column;
+.hero{position:relative;isolation:isolate;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
  padding:0 var(--pad) 28px;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url(../assets/electrical.jpg) center/cover no-repeat;
  transform:scale(1.07);animation:settle 2.2s cubic-bezier(.2,.7,.2,1) forwards}
@@ -35,17 +35,24 @@ body{font-family:"Jakarta",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;c
  background:linear-gradient(90deg,rgba(var(--base-rgb),.95) 0%,rgba(var(--base-rgb),.84) 40%,rgba(var(--base-rgb),.42) 100%),
  linear-gradient(0deg,rgba(var(--base-rgb),.75) 0%,rgba(var(--base-rgb),0) 38%)}
 
-.nav{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px;
- padding:12px var(--pad);background:#fff;color:#16181b;box-shadow:0 1px 0 rgba(0,0,0,.08)}
-.brand{display:flex;align-items:center;gap:13px;min-width:0}
+.nav{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:24px;
+ min-height:76px;padding:12px var(--pad);color:#fff;background:rgba(var(--base-rgb),.3);
+ -webkit-backdrop-filter:blur(16px) saturate(140%);backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid rgba(255,255,255,.12)}
+.brand{display:flex;align-items:center;gap:13px;min-width:0;flex:0 1 auto}
 .mark{flex:none;width:46px;height:46px;border-radius:10px;background:var(--signal);color:var(--ink);display:grid;place-items:center;
  font-weight:700;font-size:17px;letter-spacing:-.01em}
-.brand-name{font-weight:700;font-size:19px;letter-spacing:-.018em;line-height:1.15}
-.nav-right{display:flex;align-items:center;gap:24px}
-.nav-phone{font-weight:600;font-size:16px;color:#2b2e33;font-variant-numeric:tabular-nums;white-space:nowrap}
+.brand-name{font-weight:700;font-size:19px;letter-spacing:-.018em;line-height:1.15;max-width:18ch}
+.links{display:flex;align-items:center;gap:clamp(18px,1.9vw,32px);font-size:15px;font-weight:500;color:rgba(255,255,255,.78);white-space:nowrap}
+.links span{position:relative;padding:6px 0}
+.links .on{color:#fff;font-weight:600}
+.links .on::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;border-radius:2px;background:var(--signal)}
+.nav-right{display:flex;align-items:center;gap:22px;flex:none}
+.nav-phone{font-weight:600;font-size:15px;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
 .nav-btn{background:var(--signal);color:var(--ink);border-radius:8px;padding:12px 20px;font-weight:700;font-size:15px;white-space:nowrap}
+.burger{display:none;width:24px;height:16px;flex:none;
+ background:linear-gradient(#fff,#fff) top/100% 2px no-repeat,linear-gradient(#fff,#fff) center/100% 2px no-repeat,linear-gradient(#fff,#fff) bottom/100% 2px no-repeat}
 
-.main{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 408px;gap:clamp(40px,6vw,96px);align-items:end;padding:clamp(48px,9vh,110px) 0 clamp(28px,5vh,56px)}
+.main{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 408px;gap:clamp(40px,6vw,96px);align-items:end;padding:calc(76px + clamp(48px,9vh,110px)) 0 clamp(28px,5vh,56px)}
 h1{font-size:var(--name);font-weight:700;line-height:1;letter-spacing:-.038em;max-width:12ch;
  overflow-wrap:break-word;clip-path:inset(-25% 100% -25% -2%);animation:apply .95s .25s cubic-bezier(.2,.7,.15,1) forwards}
 .stripe{width:132px;height:8px;margin-top:clamp(22px,3.4vh,34px);background:var(--signal);transform:scaleX(0);transform-origin:left;
@@ -73,18 +80,21 @@ h1{font-size:var(--name);font-weight:700;line-height:1;letter-spacing:-.038em;ma
 @keyframes stripe{to{transform:scaleX(1)}}
 @media (prefers-reduced-motion:reduce){.hero::before,h1,.stripe{animation:none;transform:none;clip-path:none}}
 
+@media (max-width:1300px){.nav-phone{display:none}}
+@media (max-width:1140px){.links{display:none}.burger{display:block}}
 @media (max-width:1060px){.main{grid-template-columns:1fr;align-items:start}.card{max-width:520px}}
 @media (max-width:760px){
  .hero{padding:0 20px 96px;min-height:0}
  .hero::before{background-image:url(../assets/electrical-m.jpg)}
  .hero::after{background:linear-gradient(180deg,rgba(var(--base-rgb),.78) 0%,rgba(var(--base-rgb),.9) 55%,rgba(var(--base-rgb),.97) 100%)}
- .nav{padding:10px 16px;min-height:64px}
+ .nav{padding:10px 20px;min-height:64px;gap:16px}
  .mark{width:40px;height:40px;font-size:15px;border-radius:9px}
  .brand{gap:10px}
  .brand-name{font-size:16px}
  .nav-phone{display:none}
- .nav-btn{padding:10px 14px;font-size:14px}
- .main{padding:44px 0 32px;gap:36px}
+ .nav-btn{display:none}
+ .brand-name{max-width:none}
+ .main{padding:calc(64px + 40px) 0 32px;gap:36px}
  h1{max-width:none}
  .stripe{width:96px;height:7px}
  .sub{margin-top:18px}
@@ -96,11 +106,12 @@ h1{font-size:var(--name);font-weight:700;line-height:1;letter-spacing:-.038em;ma
   box-shadow:0 -10px 30px rgba(0,0,0,.25)}
 }
 </style></head><body>
-<header class="nav">
- <div class="brand"><div class="mark" aria-hidden="true">LE</div><span class="brand-name">Lakeside Electric</span></div>
- <div class="nav-right"><span class="nav-phone">(301) 555-0199</span><span class="nav-btn">Free estimate</span></div>
-</header>
 <section class="hero">
+ <header class="nav">
+  <div class="brand"><div class="mark" aria-hidden="true">LE</div><span class="brand-name">Lakeside Electric</span></div>
+  <nav class="links" aria-label="Main"><span class="on">Home</span><span>Services</span><span>About Us</span><span>Service Areas</span><span>Reviews</span><span>Contact</span></nav>
+  <div class="nav-right"><span class="nav-phone">(301) 555-0199</span><span class="nav-btn">Free estimate</span><span class="burger" aria-hidden="true"></span></div>
+ </header>
  <div class="main">
   <div class="copy">
    <h1>Lakeside Electric</h1>
