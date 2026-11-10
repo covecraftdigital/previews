@@ -1,67 +1,118 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta name="referrer" content="no-referrer">
 <meta name="format-detection" content="telephone=no,address=no,email=no,date=no">
-<title>Lakeside Electric · Concept preview</title>
-<link rel="preload" as="image" href="../assets/electrical.jpg" media="(min-width:701px)">
-<link rel="preload" as="image" href="../assets/electrical-m.jpg" media="(max-width:700px)">
+<meta name="theme-color" content="#1b1813">
+<title>Lakeside Electric | Electrical in Bowie</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lakeside Electric">
+<meta property="og:description" content="A homepage concept for Lakeside Electric in Bowie.">
+<meta property="og:url" content="https://covecraftdigital.github.io/previews/lakeside-electric-kqym9/">
+<meta property="og:image" content="https://covecraftdigital.github.io/previews/assets/electrical.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23E9A51C'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial Narrow,Arial,sans-serif' font-weight='700' font-size='27' fill='%231b1813'%3ELE%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="font" type="font/woff" href="../assets/archivo.woff" crossorigin>
+<link rel="preload" as="image" href="../assets/electrical.jpg" media="(min-width:761px)">
+<link rel="preload" as="image" href="../assets/electrical-m.jpg" media="(max-width:760px)">
 <style>
-:root{--dark:#141414;--accent:#D8961B;--accent2:#F5C969;--cream:#F7F3EE}
+@font-face{font-family:"Archivo";src:url(../assets/archivo.woff) format("woff");font-weight:400 800;font-stretch:62% 100%;font-display:swap}
+:root{--base:#1b1813;--base-rgb:27,24,19;--signal:#E9A51C;--ink:#1b1813;--name:clamp(56px,8.4vw,136px);
+ --pad:clamp(20px,5vw,80px);--white:#fff;--soft:rgba(255,255,255,.8)}
 *{box-sizing:border-box;margin:0;padding:0}
 a,a[x-apple-data-detectors],a[href^="tel"]{color:inherit!important;text-decoration:none!important;font:inherit!important;pointer-events:none}
-html,body{background:var(--dark)}
-body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#1d1d1d;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(16px,5vw,76px);background:var(--cream)}
-.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--dark);min-width:0}
-.logo span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.mark{flex:none;width:46px;height:46px;border-radius:10px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:18px;font-weight:800}
-.right{display:flex;align-items:center;gap:24px}
-.phone{font-weight:700;font-size:17px;white-space:nowrap;color:#1d1d1d}
-.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;border-radius:6px;padding:17px 30px;font-size:17px;text-decoration:none;white-space:nowrap}
-.hero{position:relative;flex:1;min-height:690px;padding:90px clamp(16px,5vw,76px) 80px;display:flex;justify-content:space-between;gap:48px;
- background:linear-gradient(90deg,rgba(10,12,14,.88) 0%,rgba(10,12,14,.72) 45%,rgba(10,12,14,.45) 100%),
- linear-gradient(0deg,color-mix(in srgb,var(--dark) 55%,transparent),transparent 60%),url(../assets/electrical.jpg);background-size:cover;background-position:center;overflow:hidden}
-.hero:before{display:none;content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px}
-.copy{position:relative;max-width:780px}
-.eyebrow{color:var(--accent2);font-weight:700;letter-spacing:.14em;font-size:15px;text-transform:uppercase;margin-bottom:22px}
-h1{color:#fff;font-size:clamp(40px,5.3vw,76px);line-height:1.04;letter-spacing:-.035em;font-weight:800}
-h1 em{font-style:normal;color:var(--accent2)}
-.sub{color:#e4e6e8;font-size:clamp(17px,1.5vw,21px);line-height:1.55;margin-top:26px;max-width:620px}
-.ctas{display:flex;flex-wrap:wrap;gap:18px;margin-top:38px}
-.ghost{border:2px solid rgba(255,255,255,.75);color:#fff;font-weight:700;border-radius:6px;padding:15px 34px;font-size:17px}
-.card{position:relative;flex:none;width:500px;max-width:100%;align-self:flex-start;background:var(--cream);border-radius:10px;border-top:7px solid var(--accent);padding:38px 36px;box-shadow:0 30px 60px rgba(0,0,0,.35)}
-.card h3{font-size:29px;letter-spacing:-.02em;font-weight:800}
-.card p{color:#5a5a5a;margin:6px 0 20px;font-size:16px}
-.card label{display:block;font-size:13px;font-weight:700;letter-spacing:.1em;color:#444;margin:14px 0 7px}
-.field{border:1.5px solid #d9d4cc;background:#fff;border-radius:6px;padding:15px 16px;color:#888;font-size:16px}
-.card .btn{display:block;text-align:center;margin-top:20px}
-.fine{text-align:center;font-size:14px;color:#777;margin-top:14px}
-.tag{position:absolute;left:clamp(16px,5vw,76px);bottom:22px;background:rgba(0,0,0,.55);color:#fff;font-size:13px;padding:7px 12px;border-radius:20px;letter-spacing:.02em}
-@media (max-width:1100px){.hero{flex-direction:column;gap:40px;padding-top:64px;min-height:0}.card{width:560px}}
-@media (max-width:700px){
- .hero{background-image:linear-gradient(180deg,rgba(10,12,14,.82) 0%,rgba(10,12,14,.7) 100%),url(../assets/electrical-m.jpg);padding:44px 16px 84px;gap:32px}
- header{padding:12px 16px}.logo{font-size:17px}.mark{width:40px;height:40px;font-size:16px}
- .logo span{white-space:normal;line-height:1.15}.right .phone{display:none}.right .btn{padding:12px 16px;font-size:15px}
- .eyebrow{font-size:13px;margin-bottom:16px}.sub{margin-top:18px}
- .ctas{flex-direction:column;gap:12px;margin-top:28px}.ctas .btn,.ctas .ghost{text-align:center;width:100%}
- .card{padding:28px 22px}.card h3{font-size:24px}
- .tag{left:16px;bottom:18px;font-size:12px}
+html{background:var(--base)}
+body{font-family:"Archivo","Arial Narrow",Arial,system-ui,sans-serif;font-stretch:100%;color:var(--white);
+ -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;background:var(--base)}
+
+.hero{position:relative;isolation:isolate;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
+ padding:22px var(--pad) 28px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url(../assets/electrical.jpg) center/cover no-repeat;
+ transform:scale(1.07);animation:settle 2.2s cubic-bezier(.2,.7,.2,1) forwards}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+ background:linear-gradient(90deg,rgba(var(--base-rgb),.95) 0%,rgba(var(--base-rgb),.84) 40%,rgba(var(--base-rgb),.42) 100%),
+ linear-gradient(0deg,rgba(var(--base-rgb),.75) 0%,rgba(var(--base-rgb),0) 38%)}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.mark{flex:none;width:52px;height:52px;border-radius:9px;background:var(--signal);color:var(--ink);display:grid;place-items:center;
+ font-weight:800;font-stretch:72%;font-size:23px;letter-spacing:.01em}
+.top-right{display:flex;align-items:center;gap:22px}
+.top-phone{font-weight:600;font-size:17px;font-variant-numeric:tabular-nums;letter-spacing:.01em;white-space:nowrap}
+.top-btn{border:1.5px solid rgba(255,255,255,.45);border-radius:6px;padding:11px 18px;font-weight:600;font-size:15px;white-space:nowrap}
+
+.main{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 408px;gap:clamp(40px,6vw,96px);align-items:end;padding:clamp(48px,9vh,110px) 0 clamp(28px,5vh,56px)}
+h1{font-size:var(--name);font-weight:800;font-stretch:72%;line-height:.9;letter-spacing:-.008em;max-width:11.5ch;
+ overflow-wrap:break-word;clip-path:inset(-25% 100% -25% -2%);animation:apply .95s .25s cubic-bezier(.2,.7,.15,1) forwards}
+.stripe{width:132px;height:8px;margin-top:clamp(22px,3.4vh,34px);background:var(--signal);transform:scaleX(0);transform-origin:left;
+ animation:stripe .6s 1.05s cubic-bezier(.2,.7,.2,1) forwards}
+.sub{margin-top:22px;max-width:36ch;font-size:clamp(18px,1.45vw,22px);line-height:1.5;color:var(--soft)}
+.call{display:inline-block;margin-top:34px;background:var(--signal);color:var(--ink);border-radius:6px;padding:18px 30px;
+ font-weight:700;font-stretch:88%;font-size:20px;letter-spacing:.005em;font-variant-numeric:tabular-nums}
+
+.card{background:#fff;color:#1c1c1c;border-radius:10px;padding:34px 32px 28px;box-shadow:0 30px 70px -20px rgba(0,0,0,.55)}
+.card h2{font-size:30px;font-weight:800;font-stretch:80%;line-height:1.05;letter-spacing:-.005em}
+.card p{margin:8px 0 22px;color:#5d5d5d;font-size:16px}
+.card .lbl{display:block;margin:14px 0 6px;font-size:14px;font-weight:600;color:#333}
+.field{border:1.5px solid #dadada;border-radius:6px;padding:14px 15px;font-size:16px;color:#8c8c8c}
+.card .go{display:block;margin-top:22px;text-align:center;background:var(--signal);color:var(--ink);border-radius:6px;padding:16px;
+ font-weight:700;font-stretch:88%;font-size:18px}
+.card .fine{margin:14px 0 0;text-align:center;font-size:14px;color:#777}
+.nowrap{white-space:nowrap}
+
+.foot{display:flex;justify-content:flex-start}
+.tag{background:rgba(0,0,0,.5);color:#fff;font-size:13px;padding:7px 12px;border-radius:20px;letter-spacing:.01em}
+.bar{display:none}
+
+@keyframes settle{to{transform:scale(1)}}
+@keyframes apply{to{clip-path:inset(-25% -4% -25% -2%)}}
+@keyframes stripe{to{transform:scaleX(1)}}
+@media (prefers-reduced-motion:reduce){.hero::before,h1,.stripe{animation:none;transform:none;clip-path:none}}
+
+@media (max-width:1060px){.main{grid-template-columns:1fr;align-items:start}.card{max-width:520px}}
+@media (max-width:760px){
+ .hero{padding:16px 20px 96px}
+ .hero::before{background-image:url(../assets/electrical-m.jpg)}
+ .hero::after{background:linear-gradient(180deg,rgba(var(--base-rgb),.78) 0%,rgba(var(--base-rgb),.9) 55%,rgba(var(--base-rgb),.97) 100%)}
+ .mark{width:44px;height:44px;font-size:20px;border-radius:8px}
+ .top-phone{display:none}
+ .top-btn{padding:9px 14px;font-size:14px}
+ .main{padding:44px 0 32px;gap:36px}
+ h1{max-width:none}
+ .stripe{width:96px;height:7px}
+ .sub{margin-top:18px}
+ .call{display:none}
+ .card{padding:26px 22px 22px}
+ .card h2{font-size:26px}
+ .bar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--signal);color:var(--ink);text-align:center;
+  padding:17px 20px calc(17px + env(safe-area-inset-bottom));font-weight:700;font-stretch:88%;font-size:18px;font-variant-numeric:tabular-nums;
+  box-shadow:0 -10px 30px rgba(0,0,0,.25)}
 }
 </style></head><body>
-<header><div class="logo"><div class="mark">LE</div><span>Lakeside Electric</span></div>
-<div class="right"><span class="phone">(301) 555-0199</span><span class="btn">Free Estimate</span></div></header>
-<section class="hero"><div class="copy">
-<div class="eyebrow">Bowie Electrical</div>
-<h1>Electrical done right in <em>Bowie</em>.</h1>
-<p class="sub">Electrical for homeowners in Bowie and the surrounding area. Call or request a free estimate.</p>
-<div class="ctas"><span class="btn">&#9742;&nbsp; Call (301) 555-0199</span><span class="ghost">See Our Work</span></div></div>
-<div class="card"><h3>Get a free estimate</h3><p>Takes 30 seconds. We'll call you back.</p>
-<label>NAME</label><div class="field">Your name</div>
-<label>PHONE</label><div class="field">(000) 000-0000</div>
-<label>PROJECT</label><div class="field">What's the electrical job?</div>
-<span class="btn">Request My Estimate</span><div class="fine">No obligation. Prefer to talk? Call <span style="white-space:nowrap">(301) 555-0199</span>.</div></div>
-<div class="tag">Concept preview · Covecraft Digital</div></section>
+<section class="hero">
+ <header class="top">
+  <div class="mark" aria-hidden="true">LE</div>
+  <div class="top-right"><span class="top-phone">(301) 555-0199</span><span class="top-btn">Free estimate</span></div>
+ </header>
+ <div class="main">
+  <div class="copy">
+   <h1>Lakeside Electric</h1>
+   <div class="stripe" aria-hidden="true"></div>
+   <p class="sub">Electrical services in Bowie and nearby areas. Call for a free estimate.</p>
+   <span class="call">Call (301) 555-0199</span>
+  </div>
+  <div class="card">
+   <h2>Get a free estimate</h2>
+   <p>Takes 30 seconds. We'll call you back.</p>
+   <span class="lbl">Name</span><div class="field">Your name</div>
+   <span class="lbl">Phone</span><div class="field">(000) 000-0000</div>
+   <span class="lbl">Project</span><div class="field">What's the electrical job?</div>
+   <span class="go">Request my estimate</span>
+   <p class="fine">No obligation. Prefer to talk? Call <span class="nowrap">(301) 555-0199</span>.</p>
+  </div>
+ </div>
+ <div class="foot"><span class="tag">Concept preview · Covecraft Digital</span></div>
+</section>
+<div class="bar">Call (301) 555-0199</div>
 </body></html>
